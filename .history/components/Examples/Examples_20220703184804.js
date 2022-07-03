@@ -199,36 +199,31 @@ for(let i = 0; i < 30; i++){
 	// })
 
 	//3. OBSERVE SPECIFC INDEX WITH CASE
-	// row.onClick(()=> {
-	// 	switch(i) {
-	// 		case 0:
-	// 			print("row " + i + " is clicked")
-	// 			break;
-	// 		case 1:
-	// 			print("row " + i + " is clicked")
-	// 			break;
+	row.onClick(()=> {
+		switch(i) {
+			case 0:
+				print("row " + i + " is clicked")
+				i.animate ({
+					scale: 1.2
+				})
+				break;
+			case 1:
+				print("row " + i + " is clicked")
+				break;
+			case 2:
+				print("row " + i + " is clicked")
+				break;
+			case 3:
+				print("row " + i + " is clicked")
+				break;
 
-	// 	}
-	// })
-
-	//4. OBSERVE SPECIFIC INDEX WITH CASE AND ANIMATE
-	// row.onClick(()=> {
-	// 	switch(i) {
-	// 		case 0:
-	// 			print("row " + i + " is clicked")
-	// 			row.animate ({
-	// 				scale: 1.2
-	// 			})
-	// 			break;
-	// 		case 1:
-	// 			print("row " + i + " is clicked")
-	// 			break;
-
-	// 	}
-	// })
-
-	//4. OBSERVE SPECIFIC INDEX WITH CASE AND STATE CYCLE
+		}
+	})
 };
+
+
+
+
 
 // Next, create a panel to display scroll events.
 let demoAPanel = new Layer({
