@@ -1,5 +1,9 @@
 # galileo
+
 Galileo is a Javascript template to create amazing and unique interactive prototyping course
+
+
+https://user-images.githubusercontent.com/17688653/177024720-f8e2907d-a608-4be6-a6d7-8ac3431205b7.mp4
 
 #### How to run:
 1. Clone this repository or download to your local
