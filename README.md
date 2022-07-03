@@ -290,3 +290,114 @@ for (let i = 0; i < pageCount; i++) {
 ```
 
 [Back to top](#notes-and-snippets)
+
+## Flow Component
+
+```javascript
+// Flow Component Example
+Framer.Extras.Hints.disable();
+
+let Device = new DeviceComponent();
+Device.setupContext();
+
+let screenA = new Layer({
+	size: Screen.size,
+	backgroundColor: "#00AAFF",
+});
+
+let screenB = new Layer({
+	size: Screen.size,
+	backgroundColor: "#FFCC33",
+	image: Utils.randomImage(),
+});
+
+// States
+screenA.states = {
+	scaleBack: {
+		scale: 0.95,
+	},
+	scaleDefault: {
+		scale: 1,
+	},
+};
+screenA.states.animationOptions = {
+	curve: "ease-in-out",
+	time: 0.2,
+};
+
+// Flow
+let flow = new FlowComponent({
+	size: Screen.size,
+});
+
+flow.showNext(screenA);
+
+// Events
+screenA.onClick(function () {
+	screenA.animate("scaleBack");
+	flow.showOverlayBottom(screenB);
+	console.log("Show Screen B");
+});
+
+screenB.onClick(function () {
+	screenA.animate("scaleDefault");
+	flow.showPrevious();
+	console.log("Show Screen A again");
+});
+```
+
+[Back to top](#notes-and-snippets)
+
+## Lottie
+
+```javascript
+// Here's a basic example on how to use the Lottie Layer
+// Please note that the 'name' attribute is required. It must be unique, and cannot contain spaces.
+let lottieExample = new LottieLayer({
+	name: "LottieExample",
+	path: "images/lemonade.json",
+});
+```
+
+- `name` _String_ **Required** : Sets the name of the instance. Each instance must have a different name.
+- `path` _String_ **Required** : Sets the path to your JSON file.
+- `autoplay` _Boolean_ : Whether or not to autoplay the animation once it's loaded. Defaults to true.
+- `loop` _Boolean or Number_ : Whether or not to loop the animation. If you pass a number, the animation will loop that many times. Defaults to true.
+- `speed` _Number_ : Sets the speed of the animation. 1 is normal speed. 2 is double the speed and so on. Defaults to 1.
+- `direction` _Number_ : Sets the direction of the animation. 1 will play the animation forward. -1 will play the animation backwards. Defaults to 1.
+
+```javascript
+// Available methods:
+.play()
+.pause()
+.stop()
+// The animation needs to be loaded in the DOM before running these 3 methods:
+.goToAndStop( frame )
+.goToAndPlay( frame )
+.playSegments([ fromFrame, toFrame ])
+
+// Available events:
+onComplete() // This trigger after every loop
+on("change:speed", ()=>{
+	console.log('Speed changed');
+});
+on("change:direction", ()=>{
+	console.log('Direction changed');
+});
+```
+
+[Back to top](#notes-and-snippets)
+
+## Gotchas
+
+> Getting a layer's background color
+
+```javascript
+// In the old times, this line would return the value you expect
+print(layerA.backgroundColor);
+
+// This is how you'd access the color value now
+console.log(layerA.backgroundColor.color);
+```
+
+[Back to top](#notes-and-snippets)
