@@ -201,3 +201,92 @@ onTouchStart;
 ```
 
 [Back to top](#notes-and-snippets)
+
+## Set Device
+
+```javascript
+let Device = new DeviceComponent();
+Device.setupContext();
+Device.deviceType = "apple-iphone-7-gold";
+```
+
+[Back to top](#notes-and-snippets)
+
+## Set Custom Device
+
+```javascript
+let Device = new DeviceComponent();
+Device.setupContext();
+// Tablet
+Device.customize({
+	screenWidth: 720,
+	screenHeight: 1024,
+	deviceImage: "http://f.cl.ly/items/001L0v3c1f120t0p2z24/custom.png",
+	deviceImageWidth: 800,
+	deviceImageHeight: 1214,
+});
+```
+
+[Back to top](#notes-and-snippets)
+
+## Scroll Component
+
+```javascript
+// Scroll Component Example
+let Device = new DeviceComponent();
+Device.setupContext();
+
+let myScroll = new ScrollComponent({
+	width: 750,
+	height: 1334,
+	scrollHorizontal: false,
+});
+
+let placeholderContent = new Layer({
+	width: 750,
+	height: 2500,
+	backgroundColor: "skyblue",
+	parent: myScroll.content,
+});
+
+myScroll.on(Events.Move, function () {
+	console.log("Scroll: " + myScroll.scrollY);
+});
+```
+
+[Back to top](#notes-and-snippets)
+
+## Page Component
+
+```javascript
+// Page Component Example
+let Device = new DeviceComponent();
+Device.setupContext();
+
+let pageCount = 8;
+let gutter = 20;
+
+let myPageComponent = new PageComponent({
+	width: 750,
+	height: 1334,
+	scrollVertical: false,
+	clip: false,
+});
+
+for (let i = 0; i < pageCount; i++) {
+	let page = new Layer({
+		name: "Page " + i,
+		size: myPageComponent.size,
+		x: (myPageComponent.width + gutter) * i,
+		backgroundColor: "#00AAFF",
+		hueRotate: i * 20,
+		parent: myPageComponent.content,
+	});
+	page.onClick(function () {
+		console.log("Clicked: " + this.name);
+		myPageComponent.snapToPage(this);
+	});
+}
+```
+
+[Back to top](#notes-and-snippets)
