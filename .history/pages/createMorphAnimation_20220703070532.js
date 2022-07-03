@@ -33,20 +33,27 @@ let header = new Header({
 let block = new Layer({
 	name: "Block",
 	width: 100, height: 100,
+	scale: 0.8,
     midX: (prototypeWidth/2), midY: (prototypeHeight/2),
 	backgroundColor: CodebloxUI.Colors.Surface,
 	parent: mainscreen
 });
 
 block.states = {
-    circle: {
+    animated: {
         borderRadius: 60,
-        midX: (prototypeWidth/2), midY: (prototypeHeight/2),
+        options: {
+            curve: Spring,
+            time: 0.65
+        }     
     },
 
-    longcircle: {
-        width: 100, height: block.height * 1.5,
-        midX: (prototypeWidth/2), midY: (prototypeHeight/3)
+    default: {
+      borderRadius: 0,
+      options: {
+        curve: Spring,
+        time: 0.65
+      }  
     }
 }
 

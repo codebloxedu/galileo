@@ -47,6 +47,11 @@ block.states = {
     longcircle: {
         width: 100, height: block.height * 1.5,
         midX: (prototypeWidth/2), midY: (prototypeHeight/3)
+    },
+
+    longcircle: {
+        width: 100, height: 300,
+        midX: (prototypeWidth/2), midY: (prototypeHeight/3)
     }
 }
 

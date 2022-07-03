@@ -44,7 +44,7 @@ block.states = {
         midX: (prototypeWidth/2), midY: (prototypeHeight/2),
     },
 
-    longcircle: {
+    triangle: {
         width: 100, height: block.height * 1.5,
         midX: (prototypeWidth/2), midY: (prototypeHeight/3)
     }

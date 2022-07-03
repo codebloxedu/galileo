@@ -33,6 +33,7 @@ let header = new Header({
 let block = new Layer({
 	name: "Block",
 	width: 100, height: 100,
+	scale: 0.8,
     midX: (prototypeWidth/2), midY: (prototypeHeight/2),
 	backgroundColor: CodebloxUI.Colors.Surface,
 	parent: mainscreen
@@ -41,13 +42,24 @@ let block = new Layer({
 block.states = {
     circle: {
         borderRadius: 60,
-        midX: (prototypeWidth/2), midY: (prototypeHeight/2),
+        options: {
+            curve: Spring,
+            time: 0.65
+        }     
     },
 
-    longcircle: {
-        width: 100, height: block.height * 1.5,
-        midX: (prototypeWidth/2), midY: (prototypeHeight/3)
-    }
+    triangle: {
+        width: 100, height: 150,
+    },
+
+    // box: {
+    //   borderRadius: 10,
+    //   width: 100, height: 100,
+    //   options: {
+    //     curve: Spring,
+    //     time: 0.65
+    //   }  
+    // }
 }
 
 block.onClick(()=>{
