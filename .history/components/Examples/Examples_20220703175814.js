@@ -179,8 +179,7 @@ for(let i = 0; i < 30; i++){
 		parent: demoAScroll.content
 	});
 	row.centerX();
-	
-	//Observe which index is clicked
+	//
 	row.onClick(()=> {
 		print("row " + i + " is clicked")
 	})
