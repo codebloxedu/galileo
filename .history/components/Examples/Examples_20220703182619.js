@@ -204,15 +204,6 @@ for(let i = 0; i < 30; i++){
 			case 0:
 				print("row " + i + " is clicked")
 				break;
-			case 1:
-				print("row " + i + " is clicked")
-				break;
-			case 2:
-				print("row " + i + " is clicked")
-				break;
-			case 3:
-				print("row " + i + " is clicked")
-				break;
 		}
 	})
 };

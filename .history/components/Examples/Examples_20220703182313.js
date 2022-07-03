@@ -180,7 +180,7 @@ for(let i = 0; i < 30; i++){
 	});
 	row.centerX();
 
-	//Observe which index is clicked using console log for future pagination
+	//Observe which index is clicked using console log
 
 	//1. OBSERVE ALL INDEX (uncomment to test)
 	// row.onClick(()=> {
@@ -199,20 +199,18 @@ for(let i = 0; i < 30; i++){
 	// })
 
 	//3. OBSERVE SPECIFC INDEX WITH CASE
-	row.onClick(()=> {
+	i.onClick(()=> {
 		switch(i) {
 			case 0:
 				print("row " + i + " is clicked")
-				break;
 			case 1:
 				print("row " + i + " is clicked")
-				break;
-			case 2:
-				print("row " + i + " is clicked")
-				break;
-			case 3:
-				print("row " + i + " is clicked")
-				break;
+			// case 1:
+			// 	print("row " + i + " is clicked")
+			// case 2:
+			// 	print("row " + i + " is clicked")
+			// case 3:
+			// 	print("row " + i + " is clicked")
 		}
 	})
 };

@@ -213,6 +213,7 @@ for(let i = 0; i < 30; i++){
 			case 3:
 				print("row " + i + " is clicked")
 				break;
+			
 		}
 	})
 };
