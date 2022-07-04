@@ -1,7 +1,8 @@
 import { CodebloxUI } from '../components/CodebloxUI.js';
 import { Header } from '../components/Examples/Header.js';
 
-export let createMorphAnimation = new FlowComponent();
+
+export let createSimpleAnimation = new FlowComponent();
 
 let prototypeWidth = 375;
 let prototypeHeight = 667;
@@ -24,7 +25,7 @@ let mainscreen = new Layer({
 
 
 let header = new Header({
-    label: "Morph Animation",
+    label: "Simple Animation",
     hasBackButton: false, 
     parent:app
 })
@@ -33,30 +34,21 @@ let header = new Header({
 let block = new Layer({
 	name: "Block",
 	width: 100, height: 100,
+	scale: 0.8,
     midX: (prototypeWidth/2), midY: (prototypeHeight/2),
 	backgroundColor: CodebloxUI.Colors.Surface,
 	parent: mainscreen
 });
 
-block.states = {
-    circle: {
-        borderRadius: 60,
-        midX: (prototypeWidth/2), midY: (prototypeHeight/2),
-    },
-
-    longcircle: {
-        width: 100, height: block.height * 1.5,
-        midX: (prototypeWidth/2), midY: (prototypeHeight/3)
-    }
-}
-
-// block.onClick(()=>{
-//     block.stateCycle();
-// })
+block.onClick(()=>{
+    block.animate({
+        y:prototypeHeight/5
+    })
+})
 
 // SECTION: RESET ANIMATION ===========
 let resetButton = new Layer({
-	y: 600,
+	y: 400,
 	width: 120, height: 30,
     scale: 1,
 	backgroundColor: 'rgba(0,0,0,0.1)',
@@ -71,12 +63,18 @@ resetButton.style = {
 	color: "#212121"
 };
 
-
+resetButton.states = {
+    clickedState: {
+        scale: 1.1
+    }
+}
 
 resetButton.onClick(()=>{
-	block.stateCycle();
+    resetButton.stateCycle();
+	block.animate({
+		midX: (prototypeWidth/2), midY: (prototypeHeight/2),
+	})
 });
-
 
 // ADAPT TO SCREEN ===================================
 let fitToScreen = () => {

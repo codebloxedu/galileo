@@ -56,7 +56,7 @@ block.states = {
 
 // SECTION: RESET ANIMATION ===========
 let resetButton = new Layer({
-	y: 600,
+	y: 400,
 	width: 120, height: 30,
     scale: 1,
 	backgroundColor: 'rgba(0,0,0,0.1)',
