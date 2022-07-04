@@ -2,7 +2,7 @@
 LottieLayer
 -
 Implementation of Hernan Torrisi's & AirBnb "Lottie-Web" for Framer.
-by @Codeblox
+by @72mena
 */
 
 // INCLUDE LIBRARY ———————————————————————————
