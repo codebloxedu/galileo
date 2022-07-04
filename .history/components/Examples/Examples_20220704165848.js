@@ -11,7 +11,7 @@ Framer.Extras.Hints.disable();
 Framer.Defaults.Animation.curve = Spring;
 
 // Config prototype size here: 
-let prototypeWidth = 375;
+let prototypeWidth = 375
 let prototypeHeight = 677;
 
 // This is the FlowComponent that will hold all the screens.

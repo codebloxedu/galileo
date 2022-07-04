@@ -118,9 +118,9 @@ blockObject.states = {
 	}
 };
 
-blockObject.onClick(()=>{
-	blockObject.stateCycle();
-});
+// blockObject.onClick(()=>{
+// 	blockObject.stateCycle();
+// });
 
 let instruction = new Layer({
 	width: 300, height: 12,

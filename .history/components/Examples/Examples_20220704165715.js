@@ -15,7 +15,7 @@ let prototypeWidth = 375;
 let prototypeHeight = 677;
 
 // This is the FlowComponent that will hold all the screens.
-export let Examples = new FlowComponent();
+export let Test = new FlowComponent();
 
 // SECTION: HOMESCREEN ==================================
 // Main screen, which is added to the 'Examples' flow.

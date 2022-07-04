@@ -95,10 +95,10 @@ let demoEHeader = new Header({
 
 let blockObject = new Layer({
 	name: "Block layer",
-	width: 260, height: 260,
+	width: 213, height: 260,
 	midX: (prototypeWidth/2), midY: (prototypeHeight/2),
+	image: "images/codeblox.png",
 	parent: sectionMicroInteraction,
-	backgroundColor: "white"
 });
 
 blockObject.states = {
@@ -106,14 +106,12 @@ blockObject.states = {
 		scale: 0.6,
 		rotation: 45,
 		y: 100,
-		borderRadius: 500,
-		backgroundColor: "orange"
+		backgroundColor: "red"
 	},
 	blockObjectKeBawah: {
 		scale: 0.5,
 		rotation: -45,
 		y: 400,
-		borderRadius: 50,
 		backgroundColor: "yellow"
 	}
 };

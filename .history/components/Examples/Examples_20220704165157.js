@@ -107,13 +107,12 @@ blockObject.states = {
 		rotation: 45,
 		y: 100,
 		borderRadius: 500,
-		backgroundColor: "orange"
+		backgroundColor: "green"
 	},
 	blockObjectKeBawah: {
 		scale: 0.5,
 		rotation: -45,
 		y: 400,
-		borderRadius: 50,
 		backgroundColor: "yellow"
 	}
 };
