@@ -1,5 +1,5 @@
 
-import { Colors } from '../components/Colors.js';
+import { Colors } from './components/Colors.js';
 export let CodebloxCanvas = new FlowComponent();
 
 Framer.Extras.Hints.disable();

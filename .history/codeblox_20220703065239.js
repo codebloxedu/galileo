@@ -1,5 +1,5 @@
 
-import { Colors } from '../components/Colors.js';
+import { CodebloxUI } from './components/CodebloxUI.js';
 export let CodebloxCanvas = new FlowComponent();
 
 Framer.Extras.Hints.disable();
@@ -18,7 +18,7 @@ let app = new Layer({
 let mainscreen = new Layer({
 	name: "Screen Home", y: 0,
 	width: prototypeWidth, height: prototypeHeight,
-	backgroundColor: Colors.Variants.Surface,
+	backgroundColor: CodebloxUI.Colors.Surface,
 	parent: app
 });
 
@@ -26,7 +26,7 @@ let block = new Layer({
 	name: "Block layer",
 	width: 213, height: 260,
 	midX: (prototypeWidth/2), midY: (prototypeHeight/2),
-	image: "assets/Others/codeblox.png",
+	image: "images/codeblox.png",
 	parent: mainscreen,
 });
 
