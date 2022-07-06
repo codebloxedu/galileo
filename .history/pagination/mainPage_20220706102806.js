@@ -77,9 +77,7 @@ menuOptions.center();
 
 // SECTION 1. BASIC OF LAYERS ==================================
 
-// Main screen, which is added to the 'mainPage' flow.
-let sectionScrollComponent = new Layer({
-	name: "Demo A", y: 0,
+let sectionBasicofLayers = new Layer({
 	width: prototypeWidth, height: prototypeHeight,
 	backgroundColor: 'white',
 	parent: mainPage
@@ -87,9 +85,9 @@ let sectionScrollComponent = new Layer({
 
 // All next elements are added as children of 'sectionScrollComponent'.
 let demoAHeader = new Header({
-	label: "Scrollable Experience",
+	label: "Apa itu Layer?",
 	hasBackButton: true,
-	parent: sectionScrollComponent
+	parent: sectionBasicofLayers
 });
 
 let demoAPage = new Layer({
@@ -98,7 +96,7 @@ let demoAPage = new Layer({
 	height: (prototypeHeight - demoAHeader.height),
 	y: demoAHeader.height,
 	backgroundColor: 'white',
-	parent: sectionScrollComponent
+	parent: sectionBasicofLayers
 });
 
 let demoAScroll = new ScrollComponent({
@@ -179,7 +177,7 @@ let demoAPanel = new Layer({
 	borderRadius: 18,
 	backgroundColor: '#FFF',
 	shadowBlur: 16,
-	parent: sectionScrollComponent
+	parent: sectionBasicofLayers
 });
 demoAPanel.centerX();
 

@@ -38,7 +38,7 @@ let menuOptions = new Layer({
 });
 
 let optionA = new MenuButton({
-	label: "Scroll Experience",
+	label: "Apa itu Layer?",
 	parent: menuOptions
 });
 optionA.centerX();
@@ -77,28 +77,26 @@ menuOptions.center();
 
 // SECTION 1. BASIC OF LAYERS ==================================
 
-// Main screen, which is added to the 'mainPage' flow.
-let sectionScrollComponent = new Layer({
-	name: "Demo A", y: 0,
+let sectionBasicofLayers = new Layer({
 	width: prototypeWidth, height: prototypeHeight,
 	backgroundColor: 'white',
 	parent: mainPage
 });
 
 // All next elements are added as children of 'sectionScrollComponent'.
-let demoAHeader = new Header({
-	label: "Scrollable Experience",
+let headerTitleforBasicofLayers = new Header({
+	label: "Apa itu Layer?",
 	hasBackButton: true,
-	parent: sectionScrollComponent
+	parent: sectionBasicofLayers
 });
 
 let demoAPage = new Layer({
 	name: "Demo A Page",
 	width: prototypeWidth, 
-	height: (prototypeHeight - demoAHeader.height),
-	y: demoAHeader.height,
+	height: (prototypeHeight - headerTitleforBasicofLayers.height),
+	y: headerTitleforBasicofLayers.height,
 	backgroundColor: 'white',
-	parent: sectionScrollComponent
+	parent: sectionBasicofLayers
 });
 
 let demoAScroll = new ScrollComponent({
@@ -179,7 +177,7 @@ let demoAPanel = new Layer({
 	borderRadius: 18,
 	backgroundColor: '#FFF',
 	shadowBlur: 16,
-	parent: sectionScrollComponent
+	parent: sectionBasicofLayers
 });
 demoAPanel.centerX();
 
@@ -284,8 +282,8 @@ let demoBHeader = new Header({
 let demoBPage = new Layer({
 	name: "Demo B Page",
 	width: prototypeWidth, 
-	height: (prototypeHeight - demoAHeader.height),
-	y: demoAHeader.height,
+	height: (prototypeHeight - headerTitleforBasicofLayers.height),
+	y: headerTitleforBasicofLayers.height,
 	backgroundColor: 'white',
 	clip: true,
 	parent: sectionPageComponent
@@ -749,7 +747,7 @@ instruction.centerX();
 // Show the first screen
 mainPage.showNext(homescreen);
 
-demoAHeader.on('didClickBackButton', ()=>{
+headerTitleforBasicofLayers.on('didClickBackButton', ()=>{
 	mainPage.showPrevious();
 });
 
@@ -774,7 +772,7 @@ demoEHeader.on('didClickBackButton', ()=>{
 });
 
 optionA.onClick(()=>{
-	mainPage.showNext(sectionScrollComponent);
+	mainPage.showNext(sectionBasicofLayers);
 });
 
 optionB.onClick(()=>{

@@ -37,9 +37,6 @@ let block = new Layer({
 block.centerX();
 
 
-block.draggable.enabled = true;
-
-
 
 
 // ADAPT TO SCREEN ===================================

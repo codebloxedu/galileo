@@ -33,11 +33,9 @@ let block = new Layer({
 	width: 100, height: 100,
 	scale: 0.8,
 	backgroundColor: Colors.Variants.Surface,
+	parent: mainscreen,
 });
 block.centerX();
-
-
-block.draggable.enabled = true;
 
 
 

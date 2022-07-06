@@ -32,12 +32,8 @@ let header = new Header({
 let block = new Layer({
 	width: 100, height: 100,
 	scale: 0.8,
-	backgroundColor: Colors.Variants.Surface,
+
 });
-block.centerX();
-
-
-block.draggable.enabled = true;
 
 
 
